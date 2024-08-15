@@ -81,9 +81,46 @@
             </div>
           </div>
           <div class="marginer"></div>
-          <div class="left_2"></div>
+          <div class="left_2">
+            <div class="personal_info">
+              <div class="per_keys">
+                <div class="key">Age:</div>
+                <div class="key">Residence:</div>
+                <div class="key">Freelence:</div>
+                <div class="key">Address:</div>
+              </div>
+              <div class="per_values">
+                <div class="value"><%=user.age%></div>
+                <div class="value"><%=user.residence%></div>
+                <div class="value" style="color: rgb(126, 185, 66)">
+                  Available
+                </div>
+                <div class="value"><%=user.address%></div>
+              </div>
+            </div>
+          </div>
           <div class="marginer"></div>
-          <div class="left_3"></div>
+          <div class="left_3">
+            <div class="lang_headline">Languages</div>
+
+            <div class="lang">
+              <div class="lang-1"><%=user.languages[0]%></div>
+              <div class="lang_skill">100%</div>
+            </div>
+            <img src="box_images/line100.png" alt="" />
+
+            <div class="lang">
+              <div class="lang-2"><%=user.languages[1]%></div>
+              <div class="lang_skill">80%</div>
+            </div>
+            <img src="box_images/line80.png" alt="" />
+
+            <div class="lang">
+              <div class="lang-3"><%=user.languages[2]%></div>
+              <div class="lang_skill">60%</div>
+            </div>
+            <img src="box_images/line60.png" alt="" />
+          </div>
           <div class="marginer"></div>
           <div class="left_4"></div>
           <div class="marginer"></div>

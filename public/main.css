@@ -100,7 +100,7 @@
     width: 221px;
     height: 126px;
     margin-left: 44px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .main_frame .left_frame .left_1-2 {
@@ -126,7 +126,8 @@
     height: 153px;
     margin-top: 25px;
     margin-left: 45px;
-    background-color: aqua;
+    margin-bottom: 25px;
+    /* background-color: aqua; */
 }
 
 .main_frame .left_frame .left_1-3 {
@@ -175,7 +176,7 @@
     position: relative;
     left: 20.08%;
     right: 27.08%;
-    bottom: 5%;
+    bottom: 10%;
     /* margin-top: 5.86px; */
 }
 
@@ -195,4 +196,77 @@
     margin-top: 25px;
     margin-left: 45px;
     background-color: aqua;
+}
+
+.left_frame .left_2 .personal_info {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.personal_info .per_keys {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.personal_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.per_keys .key {
+    display: inline;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(43, 43, 43);
+    padding: 3px;
+
+    background-color: rgb(255, 180, 2);
+}
+
+.per_values .value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(43, 43, 43);
+    padding: 3px;
+
+}
+
+.personal_info .per_values {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.left_frame .left_3 {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.left_3 .lang {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    /* margin-bottom: 4px; */
+
+}
+
+.left_3 .lang_headline {
+    font-size: 18px;
 }
