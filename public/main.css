@@ -16,7 +16,7 @@
     flex-direction: row;
     align-items: center;
     margin-top: 2px;
-    background: #f7f6b9;
+    /* background: #f7f6b9; */
 }
 
 .main_frame  .left_frame {
@@ -165,19 +165,17 @@
 .icon {
     position: relative;
     width: 22.99px;
-    height: 22.8px;
+    height: 22.99px;
     border-radius: 50%;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     background: #ffb400;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-1 {
     position: relative;
-    left: 20.08%;
-    right: 27.08%;
-    bottom: 10%;
-    /* margin-top: 5.86px; */
 }
 
 .main_frame .left_frame .left_4 {
@@ -186,7 +184,7 @@
     height: 252px;
     margin-top: 25px;
     margin-left: 45px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .main_frame .left_frame .left_5 {
@@ -195,7 +193,7 @@
     height: 148px;
     margin-top: 25px;
     margin-left: 45px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .left_frame .left_2 .personal_info {
@@ -226,7 +224,7 @@
     font-weight: 400;
     font-size: 15px;
     color: rgb(43, 43, 43);
-    padding: 3px;
+    padding: 3px 6px;
 
     background-color: rgb(255, 180, 2);
 }
@@ -250,7 +248,7 @@
 .left_frame .left_3 {
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
 
 }
@@ -261,12 +259,209 @@
     color: rgb(118, 118, 118);
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    /* line-height: 24px; */
     letter-spacing: 0%;
-    /* margin-bottom: 4px; */
+    margin-top: 8px;
 
 }
 
 .left_3 .lang_headline {
     font-size: 18px;
+}
+
+.left_frame .left_4 {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+}
+
+.left_4 .skill {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-top: 8px;
+}
+
+.left_4 .skills_headline {
+    font-size: 18px;
+}
+
+.left_5 .extra_skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-top: 15px;
+}
+
+.left_5 .es_headline {
+    font-size: 18px;
+}
+
+.es_bullet {
+    margin-right: 10px;
+}
+
+.main_wrapper {
+    display: flex;
+    /* justify-content: space-around; */
+    width: 971px;
+    height: 463.09px;
+    left: 339px;
+    top: 3px;
+    background-color: white;
+
+}
+
+.main_wrapper .main_des {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    width: 55%;
+    margin-left: 30px;
+}
+
+.main_des .main_header {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 123.6%;
+}
+
+.main_des .main_par {
+    color: rgb(118, 118, 118);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.main_wrapper .main_image {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main_des .main_btn button {
+    padding: 16px 32px 16px 32px;
+    background-color: rgb(255, 180, 0);
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+.main_service {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_service .service_headline {
+    color: rgb(43, 43, 43);
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.main_service .service_des {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+.service_grid-wrapper {
+    display: grid;
+    grid-template-columns: 310px 310px 310px;
+    grid-template-rows: 225px 225px;
+    gap: 20px;
+}
+
+.service_grid {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.service_grid .service_grid-headline {
+    color: rgb(43, 43, 43);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 123.6%;
+}
+
+.service_grid .service_grid-des {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.sg_order {
+    color: rgb(255, 180, 0);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.mode_switch {
+    margin: 40px 0;
+}
+
+.active {
+    background: rgb(255, 180, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro_btn {
+    background: rgb(240, 240, 246);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 100ms ease-in;
+}
+
+.profile_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    height: 100vh
+}
+
+.pro_btn:hover {
+    background: rgb(255, 180, 0);
 }
