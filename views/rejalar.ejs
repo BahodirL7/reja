@@ -26,9 +26,9 @@
               type="text"
               autofocus
               autocomplete="off"
-              class="form-control mr-3"
-              name="item"
-              style="flex: 1; margin-right: 10px"
+              class="form-control pr-3"
+              name="reja"
+              style="flex: 1; margin-right: 14px"
             />
             <button class="btn btn-primary" style="border-radius: 20px">
               Yangi Reja Qo'shish
@@ -36,7 +36,37 @@
           </div>
         </form>
       </div>
-      <button class="btn btn-danger" style="border-radius: 20px; margin: 16px">
+
+      <ul id="item-list" class="list-group pt-5">
+        <% items.map(function(item) { %>
+        <li
+          class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+        >
+          <span class="item-text"><%=item.reja%></span>
+          <div>
+            <button
+              data-id="<%=item._id%>"
+              class="edit-me btn btn-secondary btn-sm mr-2"
+            >
+              Edit
+            </button>
+
+            <button
+              data-id="<%=item._id%>"
+              class="edit-me btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+
+      <button
+        id="clean-all"
+        class="btn btn-danger"
+        style="border-radius: 20px; margin: 40px 0px 10px"
+      >
         Hamma Rejalarni o'chirish
       </button>
     </div>
