@@ -1,22 +1,40 @@
+// B-TASK:
+/*
+Shunday function tuzing, u 1 ta string parametrga ega bo'lsin, hamda o'sha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7 ni return qiladi.
+*/
+
+function countDigits(string) {
+  let count = 0;
+  for (const str of string) {
+    if (!isNaN(str) && str !== " ") {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countDigits("L7 5sbbc221h17"));
+
 // A-TASK:
 /*
 Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi so'zdan qatnashgan sonini return qilishi kerak boladi.
 MASALAN countLetter("e", "engineer") 3ni return qiladi.
 */
 
-function countLetter(e, word) {
-  let count = 0;
-  const char = word.split("");
-  char.map((c) => {
-    if (c === e) {
-      count++;
-    }
-  });
-  return count;
-}
+// function countLetter(e, word) {
+//   let count = 0;
+//   const char = word.split("");
+//   char.map((c) => {
+//     if (c === e) {
+//       count++;
+//     }
+//   });
+//   return count;
+// }
 
-const result = countLetter("e", "engineeringeeee");
-console.log("A-Task:", result);
+// const result = countLetter("e", "engineeringeeee");
+// console.log("A-Task:", result);
 
 // ======= //
 
