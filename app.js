@@ -5,6 +5,7 @@ const fs = require("fs");
 
 // MongoDB call
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
@@ -28,20 +29,27 @@ app.set("view engine", "ejs");
 
 // 4: Routing code
 app.post("/create-item", (req, res) => {
-  console.log("user entered /creat_item");
+  console.log("user entered /create_item");
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("something went wrong");
-    } else {
-      res.end("succesfully added");
-    }
+    console.log(data.ops);
+    res.json(data.ops[0]);
   });
 });
 
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+  res.end("done");
 });
 
 app.get("/", (req, res) => {
@@ -54,7 +62,7 @@ app.get("/", (req, res) => {
         res.end("something went wrong");
       } else {
         console.log(data);
-        res.render("rejalar", { items: data });
+        res.render("reja", { items: data });
       }
     });
 });
