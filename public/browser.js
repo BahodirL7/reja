@@ -53,7 +53,9 @@ document.addEventListener("click", (e) => {
           console.log(response.data);
           e.target.parentElement.parentElement.remove();
         })
-        .catch((err) => {});
+        .catch((err) => {
+          console.log("Please try again!");
+        });
     }
   }
 
@@ -75,7 +77,9 @@ document.addEventListener("click", (e) => {
             ".item-text"
           ).innerHTML = userInput;
         })
-        .catch((err) => {});
+        .catch((err) => {
+          console.log("Please try again!");
+        });
     }
   }
 });
