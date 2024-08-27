@@ -1,17 +1,69 @@
+// D-TASK
+
+/*
+Shunday class tuzing nomi Shop, va uni constructoriga 3 xil mahsulot pass bo'lsin, 
+hamda classning 3ta methodi bo'lsin, biri qoldiq, biri sotish va biri qabul. 
+Har bir method ishga tushganda vaqtni ham log qilsin.
+MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40 da 4ta non, 
+5 ta lagmon va 2ta cola mavjud!; shop.sotish('non', 3) & shop.qabul('cola', 4) & 
+shop.qoldiq() return MASALAN: hozir 20:50 da 1 ta non, 5 ta lag'mon va 6 ta cola mavjud!
+*/
+
+const moment = require("moment");
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+    this.time = moment().format("HH:mm");
+  }
+
+  qoldiq() {
+    console.log(
+      `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
+    );
+  }
+
+  sotish(item, amount) {
+    if (this[item] >= amount) {
+      this[item] -= amount;
+      console.log(
+        `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
+      );
+    } else {
+      console.log(
+        `Hozir ${this.time} da ${amount} ta ${item} sotish imkoni yo'q, yetarli emas.`
+      );
+    }
+  }
+
+  qabul(item, amount) {
+    this[item] += amount;
+    console.log(`Hozir ${this.time} da ${amount} ta ${item} qabul qilindi.`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("cola", 3);
+shop.qoldiq();
+
 // C-TASK:
 /*
 Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
-function checkContent(str1, str2) {
-  const arr1 = [...str1].sort().join("");
-  const arr2 = [...str2].sort().join("");
-  return arr1 === arr2 ? true : false;
-}
+// function checkContent(str1, str2) {
+//   const arr1 = [...str1].sort().join("");
+//   const arr2 = [...str2].sort().join("");
+//   return arr1 === arr2 ? true : false;
+// }
 
-const result = checkContent("mitgroup", "puorgtim");
-console.log("C-TASK:", result);
+// const result = checkContent("mitgroup", "puorgtim");
+// console.log("C-TASK:", result);
 
 // B-TASK:
 /*
