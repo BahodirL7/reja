@@ -1,4 +1,19 @@
-// D-TASK
+// E-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+  const rev = [...str];
+  // console.log(rev);
+  const natija = rev.reverse().join("");
+  return natija;
+}
+
+const result = getReverse("hello");
+console.log("E-TASK:", result);
+
+// D-TASK:
 
 /*
 Shunday class tuzing nomi Shop, va uni constructoriga 3 xil mahsulot pass bo'lsin, 
@@ -9,46 +24,46 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40 da 4ta
 shop.qoldiq() return MASALAN: hozir 20:50 da 1 ta non, 5 ta lag'mon va 6 ta cola mavjud!
 */
 
-const moment = require("moment");
+// const moment = require("moment");
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-    this.time = moment().format("HH:mm");
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//     this.time = moment().format("HH:mm");
+//   }
 
-  qoldiq() {
-    console.log(
-      `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
-    );
-  }
+//   qoldiq() {
+//     console.log(
+//       `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
+//     );
+//   }
 
-  sotish(item, amount) {
-    if (this[item] >= amount) {
-      this[item] -= amount;
-      console.log(
-        `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
-      );
-    } else {
-      console.log(
-        `Hozir ${this.time} da ${amount} ta ${item} sotish imkoni yo'q, yetarli emas.`
-      );
-    }
-  }
+//   sotish(item, amount) {
+//     if (this[item] >= amount) {
+//       this[item] -= amount;
+//       console.log(
+//         `Hozir ${this.time} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud.`
+//       );
+//     } else {
+//       console.log(
+//         `Hozir ${this.time} da ${amount} ta ${item} sotish imkoni yo'q, yetarli emas.`
+//       );
+//     }
+//   }
 
-  qabul(item, amount) {
-    this[item] += amount;
-    console.log(`Hozir ${this.time} da ${amount} ta ${item} qabul qilindi.`);
-  }
-}
+//   qabul(item, amount) {
+//     this[item] += amount;
+//     console.log(`Hozir ${this.time} da ${amount} ta ${item} qabul qilindi.`);
+//   }
+// }
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 3);
-shop.qoldiq();
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("cola", 3);
+// shop.qoldiq();
 
 // C-TASK:
 /*
